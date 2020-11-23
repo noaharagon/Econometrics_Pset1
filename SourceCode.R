@@ -11,9 +11,9 @@ library(stargazer)
 ## Setting working directory and loading in data
 load("insurance-all.Rdata")
 
-## counting numbers of observations and covariates
+## counting numbers of observations and covariates (if charges are dependent variable)
 n_obs <- nrow(data)
-n_cov <- ncol(data)
+n_cov <- ncol(data)-1
 
 ## highest number of children covered by one health insurance
 max_child <- max(data$children)
